@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;   
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --transicion-i: .4s ease-in-out; 
+    --color-i: #88A8E0;
+}
+
+
+.di_generador{
+    background: black; overflow-y: auto;
+    position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+    justify-content: center; align-items: center; display: flex;
+}
+
+.frm_generador{
+    background: white;
+    position: relative; flex-direction: column;
+    display: flex; width: calc(100% - 10px); height: calc(100% - 10px);
+    max-width: 750px; max-height: 750px; 
+    border-radius: 3px; overflow: hidden; box-shadow: 0 0 3px 1px white;
+}
+
+.di_generador_itm{
+    background: none; display: flex; width: 100%; 
+}
+.di_generador_itm.input{ height: 150px; justify-content: center; align-items: center; }
+.di_generador_itm.opciones{ height: 100%; background: var(--color-i); flex-direction: column; border-radius: 3px; }
+
+.ipt_generador_itm{
+    background: none; border: none; outline: none; 
+    display: block; text-align: center; font-size: 18px;
+}
+.ipt_generador_itm::selection{ background: none; }
+.ipt_generador_itm.copy{ width: calc(100% - 10px); }
+.di_generador_itm_opc{
+    background: none;
+    justify-content: center; align-items: center;
+    display: flex; width: calc(100% - 10px); height: 60px;
+    max-width: 500px; margin: 0 auto; overflow: hidden;  color: white; 
+}
+.di_generador_itm_opc:first-child{ margin-top: 5px; }
+.di_generador_itm_opc:last-child{ margin-bottom: 5px; }
+.di_generador_itm_opc.rango{ background: none; justify-content: space-between; }
+.di_generador_itm_opc.valores{ height: 100%; background: none; overflow-y: auto; align-items: inherit; justify-content: inherit; flex-direction: column; } 
+.di_generador_itm_opc.btn{ background: none; }
+
+.ipt_generador_itm.rango{ -webkit-appearance: none; width: calc(100% - 50px); position: relative; background: none; }
+.ipt_generador_itm.rango::-webkit-slider-runnable-track{ background-color: white; -webkit-appearance: none; height: 5px; margin: 0 5px; border-radius: 15px; }
+.ipt_generador_itm.rango::-webkit-slider-thumb{ background: white; -webkit-appearance: none; width: 20px; height: 20px; border-radius: 10px; margin-top: -7.5px; }
+
+.di_generador_itm_opc_itm{
+    background: none;
+    justify-content: center; align-items: center; 
+    display: flex; width: 100%; height: 60px;
+}
+
+.di_generador_itm_opc_itms{
+    background: none; align-items: center; 
+    display: flex; height: 100%;
+}
+
+.di_generador_itm_opc_itms.i{ width: calc(100% - 80px); background: none; }
+.di_generador_itm_opc_itms.i span{ max-width: calc(100% - 10px); white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.di_generador_itm_opc_itms.ii{ width: 80px; position: relative; }
+
+.lbl_generador_itm{
+    background: none; position: relative; transition: var(--transicion-i);
+    justify-content: center; align-items: center; display: flex; position: absolute; right: 1px;
+    width: 80px; height: 40px; border-radius: 40px; box-shadow: 0 0 0 1px rgb(255, 255, 255, .5);
+}
+.lbl_generador_itm.rango{ background: white; color: var(--color-i); box-shadow: none; }
+.lbl_generador_itm.slt::before{
+    content: ""; background: rgb(255, 255, 255, .5); position: absolute; left: 2.5px; 
+    display: block; width: 35px; height: 35px; border-radius: 35px; transition: var(--transicion-i);
+}
+.ipt_generador_itm.slt{ width: 0; height: 0; opacity: 0; }
+
+
+.btn_generador_itm{
+    background: none; border: none; outline: none; cursor: pointer;
+    justify-content: center; align-items: center; display: flex;
+    height: 100%;  border: 1.5px solid white; border-radius: 3px;
+    overflow: hidden; transition: var(--transicion-i); font-size: 18px;
+}
+.btn_generador_itm :nth-child(1n){ pointer-events: none; }
+.btn_generador_itm.change{ width: 60px; color: white; } 
+.btn_generador_itm.copy{ width: calc(100% - 60px); background: white; margin-left: 5px; color: var(--color-i); }
+
+/**                 **/
+/*  acciones    */
+/**                 **/
+.ipt_generador_itm.slt:checked + .lbl_generador_itm.slt::before{ left: 42.5px; background: white;  }
+.ipt_generador_itm.slt:checked + .lbl_generador_itm.slt{ box-shadow: 0 0 0 1px white; }
+
+.btn_generador_itm.change:hover{ background: white; color: var(--color-i); } 
+.btn_generador_itm.copy:hover{ background: none; color: white; }

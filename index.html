@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generador</title>
+    <script src="https://kit.fontawesome.com/a8239592de.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./estilos.css">
+    <script defer src="./generar.js"></script> 
+</head>
+<body>
+    <div class="di_generador">
+        <form class="frm_generador" id="frm_generador" action="">
+            <div class="di_generador_itm input">
+                <input type="text" class="ipt_generador_itm copy" id="ipt_generado_copy"  value="-" readonly>
+            </div>
+            <div class="di_generador_itm opciones">
+                <div class="di_generador_itm_opc rango">
+                    <span>4</span> <input type="range" class="ipt_generador_itm rango" id="ipt_rango" min="4" max="40" value="13" ><span>40</span>
+                </div>
+                <div class="di_generador_itm_opc valores">
+                    <div class="di_generador_itm_opc_itm">
+                        <div class="di_generador_itm_opc_itms i"><span>Cantidad</span></div>
+                        <div class="di_generador_itm_opc_itms ii"><label class="lbl_generador_itm rango"  id="span_cantidad" for="">13</label></div>
+                    </div>
+                    <div class="di_generador_itm_opc_itm">
+                        <div class="di_generador_itm_opc_itms i"><span>Mayusculas</span></div>
+                        <div class="di_generador_itm_opc_itms ii">
+                            <input type="checkbox" name="" class="ipt_generador_itm slt" id="ipt_mayusculas" checked>
+                            <label class="lbl_generador_itm slt" for="ipt_mayusculas"></label>
+                        </div>
+                    </div>
+                    <div class="di_generador_itm_opc_itm">
+                        <div class="di_generador_itm_opc_itms i"><span>Minusculas</span></div>
+                        <div class="di_generador_itm_opc_itms ii">
+                            <input type="checkbox" name="" class="ipt_generador_itm slt" id="ipt_minusculas" checked>
+                            <label class="lbl_generador_itm slt" for="ipt_minusculas"></label>
+                        </div>
+                    </div>
+                    <div class="di_generador_itm_opc_itm">
+                        <div class="di_generador_itm_opc_itms i"><span>Numeros</span></div>
+                        <div class="di_generador_itm_opc_itms ii">
+                            <input type="checkbox" name="" class="ipt_generador_itm slt" id="ipt_numeros" checked>
+                            <label class="lbl_generador_itm slt" for="ipt_numeros"></label>
+                        </div>
+                    </div>
+                    <div class="di_generador_itm_opc_itm">
+                        <div class="di_generador_itm_opc_itms i"><span>Carateres Escpeciales</span></div>
+                        <div class="di_generador_itm_opc_itms ii">
+                            <input type="checkbox" name="" class="ipt_generador_itm slt" id="ipt_caracteres">
+                            <label class="lbl_generador_itm slt" for="ipt_caracteres"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="di_generador_itm_opc btn">
+                    <button class="btn_generador_itm change" type="button"><i class="fa-solid fa-rotate"></i></button>
+                    <button class="btn_generador_itm copy" type="button"><i class="fa-solid fa-copy"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
